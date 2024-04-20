@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: black;
+        }
+
+        .header {
+            background-color: rgb(58, 58, 56);
+        }
+
+        .nav {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+
+        .button1 {
+            height: 10vh;
+            width: 100px;
+            border: 2px black transparent;
+            border-radius: 12px;
+        }
+
+        .button2 {
+            height: 10vh;
+            width: 100px;
+            border: 2px black transparent;
+            border-radius: 12px;
+        }
+
+        .h1 {
+            padding: 50px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+        }
+
+        .button_holder {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #grey {
+            background-color: grey;
+            height: 100px;
+            width: 100px;
+        }
+
+        #white {
+            background-color: #fff;
+            height: 100px;
+            width: 100px;
+        }
+
+        #blue {
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+        }
+
+        #yellow {
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+        }
+
+        .lastHeading {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <nav class="nav">
+                <a href=""><button class="button1">Home</button></a>
+                <a href="https://www.youtube.com/@chaiaurcode"><button class="button2">Youtube
+                        channel</button></a>
+            </nav>
+        </div>
+    </header>
+
+    <h1 class="h1">Color Scheme Switcher</h1>
+
+    <div class="button_holder">
+        <button class="buttons" id="grey"></button>
+        <button class="buttons" id="white"></button>
+        <button class="buttons" id="blue"></button>
+        <button class="buttons" id="yellow"></button>
+    </div>
+
+    <div class="lastHeading">
+        <h1>Try clicking on one of the colors above to change the background color of this page!</h1>
+    </div>
+
+</body>
+
+<script>
+
+const buttonss = document.querySelectorAll(`.buttons`)
+    const body = document.querySelector(`body`)
+
+    buttonss.forEach(function (buttons) {
+        
+        buttons.addEventListener(`click`, function (e) {
+            if (e.target.id === `grey`) {
+                body.style.backgroundColor = `grey`
+            }
+            if (e.target.id === `white`) {
+                body.style.backgroundColor = `white`
+            }
+            if (e.target.id === `blue`) {
+                body.style.backgroundColor = `blue`
+            }
+            if (e.target.id === `yellow`) {
+                body.style.backgroundColor = `yellow`
+            }
+        })
+    })
+
+</script>
+
+</html>
+
